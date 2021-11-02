@@ -1,0 +1,34 @@
+[
+    {
+        "user": 1,
+        "text": "Mi primer post"
+    },
+    {
+        "user": 2,
+        "text": "Mi segudndo post"
+    },
+    {
+        "user": 3,
+        "text": "Esto me esta matando"
+    },
+    {
+        "user": 4,
+        "text": "desde html"
+    },
+    {
+        "user": 5,
+        "text": "Ya mas tranquilo"
+    },
+    {
+        "user": 6,
+        "text": "Que es eso de estar tranquilo"
+    },
+    {
+        "user": 7,
+        "text": "alan me cae bien "
+    },
+    {
+        "user": 8,
+        "text": "hola"
+    }
+]
