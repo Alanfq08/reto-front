@@ -10,36 +10,7 @@ export default class ProfilePageHeader extends Component {
   }
 
   componentDidMount() {
-    // const api = `https://jsonplaceholder.typicode.com/users`;
-    // // const api='https://api.randomuser.me/';
-    // axios.get(api)
-    //   .then(response => {
-    //     this.setState({ persons: response.data });
-    //     console.log(this.state.persons[0].name);
-    //   });
-    // document.querySelector("#fotoDePerfil").src="fotoPerfil.png"
-
     function hacer() {
-      // var express = require('express')
-      // var cors = require('cors')
-      // var app = express()
-      // app.use(cors())
-
-      // axios({
-      //   method: 'post',
-      //   url: 'https://warm-retreat-82659.herokuapp.com/redsocial/Posts/',
-      //   data: {
-      //     user: 9,
-      //     text: 'ya funcina plox'
-      //   },
-      //   headers: {
-      //     'Access-Control-Allow-Origin': '*',
-      //     'Content-Type': 'application/json',
-      //     mode: 'no-cors',
-      //   }
-      // });
-      // console.log("ya hice post AYUDA 29");
-
       axios({
         method: 'post',
         url: `https://warm-retreat-82659.herokuapp.com/redsocial/Posts/`,
@@ -53,6 +24,7 @@ export default class ProfilePageHeader extends Component {
           'Content-Type': 'application/json',
         }
       });
+      console.log("ahora si");
     };
     hacer();
   }
