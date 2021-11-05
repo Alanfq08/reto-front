@@ -10,18 +10,19 @@ export default class ProfilePageHeader extends Component {
   }
 
   componentDidMount() {
+    const url = "https://cors-anywhere.herokuapp.com/https://warm-retreat-82659.herokuapp.com/redsocial/Persons/all";
+    axios.get(url)
+      .then(response => {
+        this.setState({ persons: response.data });
+      });
+
     function hacer() {
       axios({
         method: 'post',
-        url: `https://warm-retreat-82659.herokuapp.com/redsocial/Posts/`,
-        withCredentials: false,
+        url: `https://cors-anywhere.herokuapp.com/https://warm-retreat-82659.herokuapp.com/redsocial/Posts/`,
         data: {
           user: 9,
-          text: 'ya funcina plox'
-        },
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Content-Type': 'application/json',
+          text: 'ya funciona plox'
         }
       });
       console.log("ahora si");
@@ -48,15 +49,15 @@ export default class ProfilePageHeader extends Component {
             <div className="photo-container">
               <img id="fotoDePerfil" alt="Cargando..." src="/fotoPerfil.png"></img>
             </div>
-            {this.state.persons.slice(0, 1).map(person => <h3 id="nombre" className="title" key={person.id}>{person.name}</h3>)}
-            <p id="descripcionBreve" className="category">Cargando...</p>
+            {this.state.persons.slice(0, 1).map(person => <h3 key="1" id="nombre" className="title">{person.name}</h3>)}
+            {this.state.persons.slice(0, 1).map(person => <p key="2" id="descripcionBreve" className="category">{person.age}</p>)}
             <div className="content">
               <div className="social-description" >
-                <h2>26</h2>
+                <h2>27</h2>
                 <p>Comments</p>
               </div>
               <div className="social-description">
-                <h2>26</h2>
+                <h2>2</h2>
                 <p>Comments</p>
               </div>
               <div className="social-description">
